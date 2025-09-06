@@ -1,0 +1,307 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background: #007bff;
+  color: white;
+  padding: 5px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* jarak antara logo dan teks */
+}
+
+.logo {
+  height: 40px;   /* atur sesuai ukuran logo */
+  width: auto;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.wa-icon {
+  color: white;
+  font-size: 2em;
+  transition: 0.3s;
+}
+
+.wa-icon:hover {
+  color: #25d366;
+}
+
+.info {
+  text-align: center;
+  padding: 20px;
+}
+
+.wa-btn {
+  display: inline-block;
+  background: #25d366;
+  color: white;
+  padding: 12px 25px;
+  margin: 15px 0;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.wa-btn:hover {
+  background: #1ebe5d;
+}
+
+/* Default tombol kategori */
+.filter-btns {
+  text-align: left;
+  margin: 10px 0 0px 15px; /* geser ke kanan dengan margin kiri */
+}
+
+.filter-btns button {
+  background: transparent;
+  color: black; /* teks hitam */
+  border: 2px solid #007bff;
+  padding: 6px 14px;
+  margin: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Hover tombol (kalau tidak aktif) */
+.filter-btns button:hover {
+  background: rgba(0, 123, 255, 0.1);
+}
+
+/* Tombol aktif */
+.filter-btns button.active {
+  background: #007bff;
+  color: white; /* teks putih biar kontras */
+  border: 2px solid #007bff;
+}
+
+/* Hover tombol aktif */
+.filter-btns button.active:hover {
+  background: #0056b3;
+}
+
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 15px; /* jarak antar card */
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+  flex: 0 0 calc(16.66% - 15px); /* 100% / 6 = 16.66% */
+  max-width: calc(16.66% - 15px);
+} 
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 280px;  /* gambar diperbesar */
+  object-fit: cover;
+}
+
+.size {
+  font-size: 0.9em;
+  color: #555;
+  margin: 5px 0 10px;
+}
+
+.card-body {
+  padding: 15px;
+  text-align: center;
+}
+
+.card-body h3 {
+  margin: 10px 0 5px;
+  font-size: 1.1em;
+}
+
+.card-body .wa-btn {
+  display: block;
+  width: 100%;
+  padding: 8px 0;   /* biar tingginya pendek */
+  font-size: 0.85em;
+}
+
+.info {
+  background: white;
+  color: black;
+  padding: 10px 0;
+  overflow: hidden;
+  position: relative;
+  height: 1.5em; /* tinggi baris teks */
+}
+
+.info p {
+  position: absolute;
+  width: 100%;
+  white-space: nowrap;
+  text-align: center;
+  margin: 0;
+  opacity: 0;
+  animation: marquee 60s linear infinite;
+}
+
+/* teks ke-2 mulai setelah yg pertama selesai */
+.info p:nth-child(2) {
+  animation-delay: 30s; 
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(100%); opacity: 1; }
+  45%  { transform: translateX(-100%); opacity: 1; }
+  50%  { opacity: 0; }  /* hilang sejenak sebelum ganti */
+  100% { opacity: 0; }
+}
+
+footer {
+  background: #007bff;
+  color: white;
+  padding: 40px 20px 20px;
+  margin-top: 40px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.footer-container h3 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.footer-about,
+.footer-contact,
+.footer-social {
+  flex: 1 1 250px;
+}
+
+.footer-contact p, 
+.footer-about p {
+  margin: 5px 0;
+  font-size: 0.9em;
+}
+
+.footer-contact i {
+  margin-right: 8px;
+}
+
+.footer-social a {
+  font-size: 1.5em;
+  margin-right: 15px;
+  color: white;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: #25d366; /* hijau WA saat hover */
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.85em;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  padding-top: 10px;
+}
+
+#backToTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  width: 50px;       /* lebar sama */
+  height: 50px;      /* tinggi sama */
+  font-size: 20px;
+  border: none;
+  outline: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 50%; /* bikin bulat */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background 0.3s;
+}
+
+#backToTop:hover {
+  background-color: #0056b3;
+}
+
+/* Tablet landscape (max 1200px) -> 4 produk per baris */
+@media (max-width: 1200px) {
+  .card {
+    flex: 0 0 calc(25% - 15px);
+    max-width: calc(25% - 15px);
+  }
+}
+
+/* Tablet portrait (max 992px) -> 3 produk per baris */
+@media (max-width: 992px) {
+  .card {
+    flex: 0 0 calc(33.33% - 15px);
+    max-width: calc(33.33% - 15px);
+  }
+}
+
+/* HP besar (max 768px) -> 2 produk per baris */
+@media (max-width: 768px) {
+  .card {
+    flex: 0 0 calc(50% - 15px);
+    max-width: calc(50% - 15px);
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* HP kecil (max 480px) -> 1 produk per baris */
+@media (max-width: 480px) {
+  .card {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .filter-btns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .card img {
+    height: 200px; /* biar gambar nggak kepanjangan */
+  }
+}

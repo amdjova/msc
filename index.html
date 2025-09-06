@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katalog Produk</title>
+  <link rel="stylesheet" href="index.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Boxicons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="header-left">
+      <img src="logo.png" alt="Logo" class="logo">
+      <h1>Mas Suryo Container</h1>
+    </div>
+    <div class="header-right">
+      <a href="https://wa.me/6285368898882" target="_blank" class="wa-icon">
+        <i class='bx bxl-whatsapp'></i>
+      </a>
+    </div>
+  </header>
+
+  <div class="info">
+  <p class="marquee-text">Kami menyediakan berbagai produk berkualitas dengan harga terbaik. Siap melayani pembuatan kontainer, baja ringan, tralis, dll. dengan desain sesuai permintaan.</p>
+  <p class="marquee-text">Request warna, bentuk, dan ukuran?, bisa langsung hubungi kami!</p>
+</div>
+
+
+
+  <!-- Tombol kategori -->
+  <div class="filter-btns">
+    <button onclick="filterProducts('all')">Semua</button>
+    <button onclick="filterProducts('container')">Kontainer</button>
+    <button onclick="filterProducts('baja')">Baja Ringan</button>
+    <button onclick="filterProducts('tralis')">Tralis</button>
+    </div>
+
+  <section class="gallery" id="product-gallery">
+    <!-- Produk kategori Container -->
+    <div class="card" data-category="container">
+      <img src="gambar produk/kontainer 1.jpg" alt="Container 1">
+      <div class="card-body">
+        <h3>Kontainer 1</h3>
+        <p class="size">Ukuran: 2m x 1,5m x 2m</p>
+        <a href="https://wa.me/6285368898882?text=Halo%2C+saya+ingin+menanyakan+kontener+Ukuran: 2m x 1,5m x 2m" target="_blank" class="wa-btn">Tanyakan</a>
+      </div>
+    </div>
+
+    <div class="card" data-category="container">
+      <img src="gambar produk/kontener 2.jpg" alt="Container 2">
+      <div class="card-body">
+        <h3>Kontainer 2</h3>
+        <p class="size">Ukuran: 3m X 2m X 2m</p>
+        <a href="https://wa.me/6285368898882?text=Halo%2C+saya+ingin+menanyakan+kontener+Ukuran: 3m X 2m X 2m" target="_blank" class="wa-btn">Tanyakan</a>
+      </div>
+    </div>
+
+    <div class="card" data-category="container">
+      <img src="gambar produk/model 3.jpg" alt="Container 2">
+      <div class="card-body">
+        <h3>Kontainer 3</h3>
+        <p class="size">Ukuran: 1,5m x 1m x 2m</p>
+        <a href="https://wa.me/6285368898882?text=Halo%2C+saya+ingin+menanyakan+kontener+Ukuran: 1,5m x 1m x 2m" target="_blank" class="wa-btn">Tanyakan</a>
+      </div>
+    </div>
+
+    <div class="card" data-category="container">
+      <img src="gambar produk/model 5.jpg" alt="Container 2">
+      <div class="card-body">
+        <h3>Kontainer 4</h3>
+        <p class="size">Ukuran: 1,5m x 1m x 2m</p>
+        <a href="https://wa.me/6285368898882?text=Halo%2C+saya+ingin+menanyakan+kontener+Ukuran: 1,5m x 1m x 2m" target="_blank" class="wa-btn">Tanyakan</a>
+      </div>
+    </div>
+
+    <!-- Produk kategori Baja Ringan -->
+    <div class="card" data-category="baja">
+      <img src="gambar produk/baja ringan 1.jpg" alt="Baja Ringan 1">
+      <div class="card-body">
+        <h3>Baja Ringan 1</h3>
+        <p class="size">Ukuran sesuai permintaan</p>
+        <a href="https://wa.me/6285368898882?text=Halo%2C+saya+ingin+menanyakan+Baja+Ringan" target="_blank" class="wa-btn">Tanyakan</a>
+      </div>
+    </div>
+
+    <div class="card" data-category="baja">
+      <img src="gambar produk/baja ringan 2.jpg" alt="Baja Ringan 2">
+      <div class="card-body">
+        <h3>Baja Ringan 2</h3>
+        <p class="size">Ukuran sesuai permintaan</p>
+        <a href="https://wa.me/6285368898882?text=Halo%2C+saya+ingin+menanyakan+Baja+Ringan" target="_blank" class="wa-btn">Tanyakan</a>
+      </div>
+    </div>
+
+    <div class="card" data-category="baja">
+      <img src="gambar produk/baja ringan 3.jpg" alt="Baja Ringan 2">
+      <div class="card-body">
+        <h3>Baja Ringan 3</h3>
+        <p class="size">Ukuran sesuai permintaan</p>
+        <a href="https://wa.me/6285368898882?text=Halo%2C+saya+ingin+menanyakan+Baja+Ringan" target="_blank" class="wa-btn">Tanyakan</a>
+      </div>
+    </div>
+
+    <div class="card" data-category="baja">
+      <img src="gambar produk/baja ringan 4.jpg" alt="Baja Ringan 2">
+      <div class="card-body">
+        <h3>Baja Ringan 4</h3>
+        <p class="size">Ukuran sesuai permintaan</p>
+        <a href="https://wa.me/6285368898882?text=Halo%2C+saya+ingin+menanyakan+Baja+Ringan" target="_blank" class="wa-btn">Tanyakan</a>
+      </div>
+    </div>
+
+    <!-- Produk kategori Tralis -->
+    <div class="card" data-category="tralis">
+      <img src="gambar produk/tralis 1.jpg" alt="Tralis 1">
+      <div class="card-body">
+        <h3>Tralis 1</h3>
+        <p class="size">Ukuran sesuai permintaan</p>
+        <a href="https://wa.me/6285368898882?text=Halo%2C+saya+ingin+menanyakan+pembuatan+Tralis" target="_blank" class="wa-btn">Tanyakan</a>
+      </div>
+    </div>
+
+    <div class="card" data-category="tralis">
+      <img src="gambar produk/tralis 2.jpg" alt="Tralis 2">
+      <div class="card-body">
+        <h3>Tralis 2</h3>
+        <p class="size">Ukuran sesuai permintaan</p>
+        <a href="https://wa.me/6285368898882?text=Halo%2C+saya+ingin+menanyakan+pembuatan+Tralis" target="_blank" class="wa-btn">Tanyakan</a>
+      </div>
+    </div>
+
+    <div class="card" data-category="tralis">
+      <img src="gambar produk/tralis 3.jpg" alt="Tralis 3">
+      <div class="card-body">
+        <h3>Tralis 3</h3>
+        <p class="size">Ukuran sesuai permintaan</p>
+        <a href="https://wa.me/6285368898882?text=Halo%2C+saya+ingin+menanyakan+pembuatan+Tralis" target="_blank" class="wa-btn">Tanyakan</a>
+      </div>
+    </div>
+
+    <div class="card" data-category="tralis">
+      <img src="gambar produk/tralsi 4.jpg" alt="Tralis 4">
+      <div class="card-body">
+        <h3>Tralis 4</h3>
+        <p class="size">Ukuran sesuai permintaan</p>
+        <a href="https://wa.me/6285368898882?text=Halo%2C+saya+ingin+menanyakan+pembuatan+Tralis" target="_blank" class="wa-btn">Tanyakan</a>
+      </div>
+    </div>
+  </section>
+
+  <button id="backToTop" title="Kembali ke atas">
+  ↑
+</button>
+
+  <footer>
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>Mas Suryo Container</h3>
+      <p>Penyedia kontainer, baja ringan, tralis, dan lain-lain sesuai kebutuhan Anda.</p>
+    </div>
+
+    <div class="footer-contact">
+      <h3>Kontak</h3>
+      <p><i class='bx bx-map'></i> Jl. Sukosari BK9, Belitang, OKU Timur</p>
+      <p><i class='bx bx-phone'></i> +62 853-6889-8882</p>
+      <p><i class='bx bxl-whatsapp'></i> <a href="https://wa.me/6285368898882" target="_blank">Chat WhatsApp</a></p>
+    </div>
+
+    <div class="footer-social">
+      <h3>Produk & Jasa</h3>
+      <p>kontainer<br>
+      Atap Teras<br>
+      pembuatan Tralis<br>
+      Pembuatan Pagar<br>
+      Baja Ringan<br>
+      Pengelasan<br>
+      Pembuatan Meja<br>
+      Pembuatan Gerobak</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Mas Suryo Container. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+  function filterProducts(category) {
+    let products = document.querySelectorAll('.card');
+    let gallery = document.getElementById('product-gallery');
+    let buttons = document.querySelectorAll('.filter-btns button');
+    
+    // reset tombol kategori
+    buttons.forEach(btn => btn.classList.remove('active'));
+    
+    // tandai tombol aktif
+    event.target.classList.add('active');
+
+    let visible = 0;
+    products.forEach(p => {
+      if (category === 'all' || p.dataset.category === category) {
+        p.style.display = 'block';
+        visible++;
+      } else {
+        p.style.display = 'none';
+      }
+    });
+
+    if (visible === 2) {
+      gallery.classList.add('filtered');
+    } else {
+      gallery.classList.remove('filtered');
+    }
+  }
+
+  // Set default "Semua" aktif saat pertama kali
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelector(".filter-btns button").classList.add("active");
+  });
+</script>
+
+
+  <script>
+  let backToTopBtn = document.getElementById("backToTop");
+
+  // Tampilkan tombol setelah scroll ke bawah 200px
+  window.onscroll = function() {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  };
+
+  // Fungsi untuk scroll ke atas dengan halus
+  backToTopBtn.onclick = function() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+</script>
+</body>
+</html>
